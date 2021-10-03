@@ -1,0 +1,42 @@
+{
+  "name": "alberta-card",
+  "version": "1.0.0",
+  "description": "[Azure Static Web Apps](https://docs.microsoft.com/azure/static-web-apps/overview) allows you to easily build JavaScript apps in minutes. Use this repo with the [quickstart](https://docs.microsoft.com/azure/static-web-apps/getting-started?tabs=vanilla-javascript) to build and customize a new static site.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "start": "webpack serve --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Estyn/alberta-card.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Estyn/alberta-card/issues"
+  },
+  "homepage": "https://github.com/Estyn/alberta-card#readme",
+  "devDependencies": {
+    "css-loader": "^6.3.0",
+    "html-webpack-plugin": "^5.3.2",
+    "style-loader": "^3.3.0",
+    "webpack": "^5.56.0",
+    "webpack-cli": "^4.8.0",
+    "webpack-dev-server": "^4.3.0"
+  },
+  "dependencies": {
+    "assert": "^2.0.0",
+    "axios": "^0.21.1",
+    "browserify-zlib": "^0.2.0",
+    "buffer": "^6.0.3",
+    "jsqr": "^1.4.0",
+    "lodash": "^4.17.21",
+    "node-jose": "^2.0.0",
+    "pngjs": "^6.0.0",
+    "stream-browserify": "^3.0.0",
+    "util": "^0.12.4",
+    "zlib": "^1.0.5"
+  }
+}
