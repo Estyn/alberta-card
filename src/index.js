@@ -13,6 +13,7 @@ let patientData = {};
 var patientElement = document.getElementById("patient");
 var iosPassButton = document.getElementById("generateiOSPass");
 var linkToiOS = document.getElementById("linkToiOS");
+var instructions = document.getElementById("instructions");
 
 
 var requestID;
@@ -72,6 +73,7 @@ function tick() {
         linkToiOS.setAttribute('href', `https://generatepasses.azurewebsites.net/api/GeneratePass?code=BhnFLvyjJbYjxtzEovAPpZZPdEBNIFobkfOR3Jaf5bbC81C2TNOf1Q==&shc=${patientData.shc}&name=${name}&birthdate=${patientData.patient.birthDate}`);
 
         linkToiOS.hidden = false;
+        instructions.style.display="none"
       })
       return;
     } else {
@@ -99,7 +101,7 @@ iosPassButton.onclick = function GenerateIOSPass() {
 
     linkToiOS.setAttribute('href', `https://370f-50-65-182-139.ngrok.io/api/GeneratePass?shc=${patientData.shc}&name=${name}&birthdate=${patientData.patient.birthDate}`);
     linkToiOS.hidden = false;
-    //axios.get(`https://370f-50-65-182-139.ngrok.io/api/GeneratePass?shc=${patientData.shc}&name=${name}&birthdate=${patientData.patient.birthDate}`)
+    axios.get(`https://370f-50-65-182-139.ngrok.io/api/GeneratePass?shc=${patientData.shc}&name=${name}&birthdate=${patientData.patient.birthDate}`)
     // axios.post('https://370f-50-65-182-139.ngrok.io/api/GeneratePass', {
     //   shc: patientData.shc,
     //   name: patientData.patient.name[0].family + ', ' + patientData.patient.name[0].given.join(' '),

@@ -12,18 +12,24 @@
 <script defer src="main.bundle.js"></script></head>
 
 <body>
-  
-  
- 
-  <div id="loadingMessage">🎥 Unable to access video stream (please make sure you have a webcam enabled)</div>
-  <canvas id="canvas" hidden></canvas>
-  
+
+  <div id="instructions" class="bg-white flex flex-col items-center rounded-xl p-8 border-2 max-w-3xl my-8 mx-4 md:mx-auto">
+    <div class="bg-red-300">This site is for testing and informational purposes only</div>
+    <ul>
+      <li>Scan a vaccine card QRCode</li>
+      <li>Code will parse and validate the QR Code</li>
+      <li>You can optionally add the card to your iOS wallet</li>
+    </ul>
+    <div class="bg-red-300">Note: AHS has not published the keys for the qrcode yet, so all qrcodes will fail validation until AHS turns on the server.</div>
+    <div id="loadingMessage">🎥 Unable to access video stream (please make sure you have a webcam enabled)</div>
+    <canvas id="canvas" hidden></canvas>
+  </div>
   <a href=# id=linkToiOS hidden>Add To iOS Wallet</a>
   <div id=patient class="bg-white flex flex-col items-center rounded-xl p-8 border-2 max-w-3xl my-8 mx-4 md:mx-auto">
-    
+
   </div>
-  <button id=generateiOSPass title="Generate Pass" hidden>test</button>
-  
+  <button id=generateiOSPass title="Generate Pass" >test</button>
+
 </body>
 
 </html>
